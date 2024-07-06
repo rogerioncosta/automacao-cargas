@@ -1,4 +1,4 @@
-Attribute VB_Name = "Módulo1"
+Attribute VB_Name = "MÃ³dulo1"
 Sub galileu() 'ctrl shift R
 Attribute galileu.VB_ProcData.VB_Invoke_Func = " \n14"
 '
