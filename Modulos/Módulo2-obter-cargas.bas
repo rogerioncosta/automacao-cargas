@@ -1,4 +1,4 @@
-Attribute VB_Name = "Módulo2"
+Attribute VB_Name = "MÃ³dulo2"
 Sub carga() 'Ctrl Shift C
 Attribute carga.VB_ProcData.VB_Invoke_Func = "C\n14"
 
