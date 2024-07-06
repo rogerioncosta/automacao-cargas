@@ -1,4 +1,4 @@
-Attribute VB_Name = "Módulo3"
+Attribute VB_Name = "MÃ³dulo3"
 Sub gal() 'ctrl shift S
 Attribute gal.VB_ProcData.VB_Invoke_Func = "G\n14"
     Dim wb As Workbook
@@ -26,6 +26,6 @@ Attribute gal.VB_ProcData.VB_Invoke_Func = "G\n14"
     ' Executa a macro da planilha 2
     'Application.SendKeys "^+R"
     
-    ' Fecha a planilha 2 sem salvar as alterações
+    ' Fecha a planilha 2 sem salvar as alteraÃ§Ãµes
     'wb.Close SaveChanges:=False
 End Sub
