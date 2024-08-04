@@ -2,7 +2,23 @@ Attribute VB_Name = "Módulo2"
 Sub carga() 'Ctrl Shift C
 Attribute carga.VB_ProcData.VB_Invoke_Func = "C\n14"
 
-    Set wb = Workbooks.Open("C:\Users\Win10\Desktop\Gerenciamento de Viagem (1).xls")
+    'Set wb = Workbooks.Open("C:\Users\Usuario\Desktop\Gerenciamento de Viagem (1).xls")
+    
+    Dim filePath As String
+    
+    ' Construir o caminho dinâmico para o arquivo no desktop do usuário
+    filePath = Environ("USERPROFILE") & "\Desktop\Gerenciamento de Viagem (1).xls"
+    
+    ' Abre a planilha com o caminho dinâmico
+    On Error Resume Next
+    ' Abre a planilha 2
+    Set wb = Workbooks.Open(filePath)
+    If Err.Number <> 0 Then
+        MsgBox "O arquivo não pôde ser encontrado. Verifique o caminho ou o nome do arquivo.", vbExclamation
+        Err.Clear
+        Exit Sub
+    End If
+    On Error GoTo 0
     
     Rows("1:2").Select
     Range("BP1").Activate
@@ -66,8 +82,7 @@ continua:
     
     activeColumn = ActiveCell.Column
     
-    ActiveCell.Offset(1, 1).Select
-    
+    ActiveCell.Offset(1, 1).Select    
     
     Dim embarcador
     embarcador = Cells(Rows.Count, activeColumn).End(xlUp).Row
